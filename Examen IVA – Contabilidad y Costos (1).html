@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Examen IVA – Contabilidad y Costos</title>
+<style>
+:root{--bg:#f4f6fa;--fg:#1b2433;--card:#fff;--bd:#d5dbe6;--ac:#1f5fbf;--ok:#1a8a4a;--bad:#c0392b;--mut:#5d6b82;--fl:#d98b00;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121821;--fg:#e6ebf4;--card:#1b2431;--bd:#33405a;--ac:#6ea8ff;--ok:#4cc486;--bad:#ff7b6b;--mut:#9aa8c0;--fl:#f0b44a}}
+:root[data-theme="dark"]{--bg:#121821;--fg:#e6ebf4;--card:#1b2431;--bd:#33405a;--ac:#6ea8ff;--ok:#4cc486;--bad:#ff7b6b;--mut:#9aa8c0;--fl:#f0b44a}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.w{max-width:820px;margin:0 auto;padding:14px}
+h1{font-size:1.3rem;margin:.2rem 0}h2{font-size:1.05rem;margin:1.2rem 0 .4rem;color:var(--ac)}
+.tabs{display:flex;gap:6px;margin:10px 0}
+.tabs button,.btn{border:1px solid var(--bd);background:var(--card);color:var(--fg);padding:9px 14px;border-radius:8px;font:inherit;cursor:pointer}
+.tabs button.on,.btn.p{background:var(--ac);color:#fff;border-color:var(--ac)}
+.btn:disabled{opacity:.4;cursor:default}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:16px;margin:10px 0}
+.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.9rem}th,td{border:1px solid var(--bd);padding:6px 8px;text-align:left}th{background:var(--bg)}
+ul{padding-left:20px;margin:.3rem 0}li{margin:.2rem 0}
+.top{display:flex;justify-content:space-between;align-items:center;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);padding:8px 0;z-index:5}
+.tm{font:600 1.1rem ui-monospace,monospace}.tm.lo{color:var(--bad)}
+.q{font-size:1.08rem;font-weight:600;margin-bottom:12px}
+.o{display:flex;gap:10px;width:100%;text-align:left;margin:8px 0;padding:11px 12px;border:1.5px solid var(--bd);background:var(--card);color:var(--fg);border-radius:10px;font:inherit;cursor:pointer}
+.o b{min-width:22px;color:var(--mut)}.o.s{border-color:var(--ac);background:color-mix(in srgb,var(--ac) 14%,var(--card))}
+.o.ok{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 16%,var(--card))}.o.no{border-color:var(--bad);background:color-mix(in srgb,var(--bad) 16%,var(--card))}
+.nav{display:flex;gap:8px;justify-content:space-between;flex-wrap:wrap;margin-top:12px}
+.pal{display:grid;grid-template-columns:repeat(auto-fill,minmax(38px,1fr));gap:6px;margin-top:10px}
+.pal button{padding:7px 0;border:1px solid var(--bd);background:var(--card);color:var(--fg);border-radius:6px;font:inherit;font-size:.85rem;cursor:pointer}
+.pal .a{background:var(--ac);color:#fff;border-color:var(--ac)}.pal .f{box-shadow:inset 0 -4px var(--fl)}.pal .c{outline:2px solid var(--fg)}
+.big{font-size:2.6rem;font-weight:700;text-align:center}.mut{color:var(--mut);font-size:.9rem}
+.r{border-left:4px solid var(--bad);padding-left:10px;margin:12px 0}.r.g{border-color:var(--ok)}
+[hidden]{display:none!important}
+h1{background:linear-gradient(90deg,var(--ac),var(--ok),var(--ac));background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sl 4s linear infinite}@keyframes sl{to{background-position:200% center}}
+@keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}@keyframes pop{0%{transform:scale(1)}40%{transform:scale(1.04)}100%{transform:scale(1)}}@keyframes shk{0%,100%{transform:translateX(0)}20%{transform:translateX(-8px)}40%{transform:translateX(8px)}60%{transform:translateX(-5px)}80%{transform:translateX(5px)}}@keyframes fall{to{transform:translateY(110vh) rotate(360deg)}}
+.q{animation:up .35s both}.o{animation:up .35s both;transition:transform .15s,border-color .15s}.o:nth-child(2){animation-delay:.06s}.o:nth-child(3){animation-delay:.12s}.o:nth-child(4){animation-delay:.18s}
+.o:hover:not(.ok):not(.no):not(.dim){transform:translateX(5px);border-color:var(--ac)}.o.ok{animation:pop .5s}.o.no{animation:shk .45s}.o.dim{opacity:.55}.o.ok,.o.no,.o.dim{cursor:default}
+.fb{margin:12px 0 4px;padding:12px 14px;border-radius:10px;animation:up .3s both}.fb.g{background:color-mix(in srgb,var(--ok) 16%,var(--card));border:1px solid var(--ok)}.fb.b{background:color-mix(in srgb,var(--bad) 16%,var(--card));border:1px solid var(--bad)}
+.btn,.tabs button{transition:transform .15s,box-shadow .15s}.btn:hover:not(:disabled),.tabs button:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.25)}.btn:active{transform:scale(.97)}
+.cn{font:700 1.5rem system-ui,sans-serif}.bar{height:8px;background:var(--bd);border-radius:8px;overflow:hidden;margin-bottom:10px}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--ac),var(--ok));transition:width .5s ease;border-radius:8px}
+#rs .card,#sum .card{animation:up .4s both}.cf{position:fixed;top:-30px;font-size:22px;pointer-events:none;animation:fall 2.8s linear both;z-index:9}
+</style></head><body><div class="w">
+<h1>IVA · Contabilidad y Costos</h1>
+<div class="tabs"><button id="t1" class="on">Resumen</button><button id="t2">Examen (60)</button></div>
+
+<div id="sum">
+<div class="card"><h2 style="margin-top:0">1. Clasificación de contribuyentes (cumplir al menos 1 criterio)</h2>
+<div class="tw"><table><tr><th>Criterio anual</th><th>Gran</th><th>Mediano</th></tr>
+<tr><td>Pagos en DGT</td><td>≥ $1,000,000.01</td><td>$100,000.01 – $1,000,000</td></tr>
+<tr><td>Ventas totales IVA</td><td>≥ $14,000,000.01</td><td>$4,000,000.01 – $14,000,000</td></tr>
+<tr><td>Compras totales IVA</td><td>≥ $12,000,000.01</td><td>$3,000,000.01 – $12,000,000</td></tr>
+<tr><td>Rentas gravadas</td><td>≥ $10,000,000.01</td><td>$1,500,000.01 – $10,000,000</td></tr>
+<tr><td>Costos y gastos en renta</td><td>≥ $9,000,000.01</td><td>$1,500,000.01 – $9,000,000</td></tr>
+<tr><td>Retenciones/percepciones</td><td>≥ $50,000.01</td><td>$25,000.01 – $50,000</td></tr>
+<tr><td>Ganancia neta</td><td>≥ $500,000</td><td>—</td></tr></table></div>
+<ul><li>“Otros”: quienes no cumplen criterios de Grande ni Mediano.</li><li>Base legal: Art. 23 lit. a) Código Tributario. Gasolineras y corredores de bolsa mantienen su categoría.</li><li>Pagos en DGT = IVA interno + IVA importación + renta declaración + retenciones + pago a cuenta + impuestos específicos.</li></ul></div>
+
+<div class="card"><h2 style="margin-top:0">2. Percepción y retención (1% sobre precio neto, sin IVA)</h2>
+<ul><li><b>Retención (Art. 162 CT):</b> todo Gran Contribuyente retiene cuando <i>compra</i> a un mediano o pequeño inscrito. El comprador emite comprobante de retención; el vendedor emite CCF.</li>
+<li><b>Percepción (Art. 163 CT):</b> el Gran Contribuyente percibe cuando <i>vende</i> a un mediano o pequeño inscrito. Emite CCF. Aplica a importadores/productores/distribuidores de bebidas alcohólicas, cigarros, gaseosas/isotónicas, petróleo y derivados, ferretería, repuestos, materiales de construcción y cemento; y a la DGA en importación de vehículos usados.</li>
+<li>El Gran Contribuyente se identifica con tarjeta color celeste.</li>
+<li>Ejemplo: venta $1,000 + IVA $130. Percepción $10 → comprador paga $1,140. Retención $10 → vendedor recibe $1,120.</li>
+<li>Contabilidad: el Gran registra “IVA percibido y retenido por pagar” (pasivo); el retenido/percibido registra “IVA pagado por anticipado” (activo).</li></ul></div>
+
+<div class="card"><h2 style="margin-top:0">3. Mecánica del IVA</h2>
+<ul><li>Impuesto indirecto, plurifásico, no acumulativo, de carácter real; lo soporta el consumidor final. Se paga al comprar y se recupera al vender.</li>
+<li>Tasa 13% en operaciones internas; 0% en exportaciones. Neto × 1.13 = total; total ÷ 1.13 = neto.</li>
+<li>Art. 64: IVA a pagar = débito fiscal − crédito fiscal (mismo período). Crédito &gt; débito = IVA a favor; crédito &lt; débito = IVA a pagar.</li>
+<li>Crédito fiscal = cuenta de activo. Débito fiscal = cuenta de pasivo. Período: mes calendario.</li></ul></div>
+
+<div class="card"><h2 style="margin-top:0">4. Sujetos y obligaciones</h2>
+<ul><li>Sujeto pasivo: transferencias del año anterior ≥ $5,714.29 y activo ≥ $2,285.71. Art. 22: contribuyentes; Art. 28: excluidos.</li>
+<li>Sustantivas: pago del impuesto. Formales: controles (facturas, libros, declaraciones, imprentas autorizadas).</li>
+<li>F07: declaración mensual. F-930: informe de retención/percepción/anticipo. F210: inscripción (DUI, contrato de arrendamiento o balance inicial).</li>
+<li>Conservar documentos 10 años. Informar cambios de datos (Art. 87 CT).</li></ul></div>
+
+<div class="card"><h2 style="margin-top:0">5. Hechos generadores</h2>
+<ul><li><b>Art. 4–6:</b> transferencia onerosa de dominio de bienes muebles corporales (tangibles transportables). Títulos valores = muebles incorpóreos.</li>
+<li><b>Art. 8:</b> se causa al emitir el documento o al pagar si no requiere documento; también en consignación y aun con demora de pago. <b>Art. 9:</b> la devolución no es nueva transferencia.</li>
+<li><b>Art. 11:</b> retiro para consumo propio, socios, personal, rifas, sorteos y distribución promocional. Excepciones: faltante por caso fortuito/fuerza mayor, bienes para el seguro, donaciones a entidades sin fines de lucro.</li>
+<li><b>Art. 14–15:</b> importación e internación (incluye servicios del exterior a usuario domiciliado). <b>Art. 16:</b> prestación de servicios; excepciones: indemnizaciones y donaciones de servicios.</li>
+<li>Hecho imponible: sujeto / no sujeto (ej. inquilino paga vivienda, venta de vehículo entre particulares); exento = cumple hecho generador pero con dispensa legal; no exento = sujeto sin exención.</li>
+<li>DTE: archivo estructurado (JSON) con firma electrónica, válido sin impresión; Hacienda valida y otorga Sello de Recepción; el emisor entrega DTE y versión legible.</li></ul></div>
+<button class="btn p" id="go1">Ir al examen →</button>
+</div>
+
+<div id="ex" hidden>
+<div id="st" class="card"><h2 style="margin-top:0">Instrucciones</h2><ul><li>60 preguntas, una opción correcta cada una.</li><li>Al responder ves al instante si acertaste, cuál era la correcta y por qué.</li><li>El orden de preguntas y respuestas es aleatorio en cada intento. Aprobás con 60% o más.</li></ul><button class="btn p" id="go2">Comenzar examen</button></div>
+<div id="qa" hidden>
+<div class="top"><span id="cn" class="cn"></span><span id="sc" class="mut"></span></div><div class="bar"><i id="bi"></i></div>
+<div class="card"><div class="q" id="qt"></div><div id="op"></div><div id="ex2" hidden></div>
+<div class="nav"><button class="btn" id="pv">← Anterior</button><button class="btn" id="fg" hidden>⚑ Marcar</button><button class="btn p" id="nx">Siguiente →</button></div></div>
+<div class="card" hidden><div class="mut" id="pr"></div><div class="pal" id="pl"></div><div style="margin-top:12px"><button class="btn p" id="fin">Finalizar examen</button></div></div>
+</div>
+<div id="rs" hidden></div>
+</div>
+</div>
+<script>
+const D=`Ventas totales IVA para ser Gran Contribuyente (anual)|≥ $14,000,000.01|≥ $4,000,000.01|≥ $12,000,000.01|≥ $10,000,000.01
+Compras totales IVA para ser Gran Contribuyente|≥ $12,000,000.01|≥ $14,000,000.01|≥ $3,000,000.01|≥ $9,000,000.01
+Pagos en DGT que califican a un Gran Contribuyente|≥ $1,000,000.01|≥ $100,000.01|≥ $500,000.01|≥ $50,000.01
+Retenciones y/o percepciones efectuadas para ser Gran Contribuyente|≥ $50,000.01|≥ $25,000.01|≥ $100,000.01|≥ $500,000.01
+Ganancia neta mínima para ser Gran Contribuyente|$500,000 o más|$50,000 o más|$1,000,000 o más|$5,000,000 o más
+Total de rentas gravadas para ser Gran Contribuyente|≥ $10,000,000.01|≥ $1,500,000.01|≥ $14,000,000.01|≥ $9,000,000.01
+Costos y gastos operativos en renta para ser Gran Contribuyente|≥ $9,000,000.01|≥ $10,000,000.01|≥ $1,500,000.01|≥ $12,000,000.01
+Para ser categorizado como Gran Contribuyente se debe cumplir|Al menos uno de los criterios|Todos los criterios|Al menos tres criterios|Solo ventas y compras
+Ventas totales IVA de un Mediano Contribuyente|$4,000,000.01 a $14,000,000|$14,000,000.01 a $20,000,000|$1,500,000.01 a $10,000,000|$3,000,000.01 a $12,000,000
+Compras totales IVA de un Mediano Contribuyente|$3,000,000.01 a $12,000,000|$4,000,000.01 a $14,000,000|$1,500,000.01 a $9,000,000|$25,000.01 a $50,000
+Pagos en DGT de un Mediano Contribuyente|$100,000.01 a $1,000,000|$25,000.01 a $50,000|$1,000,000.01 a $5,000,000|$50,000.01 a $500,000
+Retenciones/percepciones de un Mediano Contribuyente|$25,000.01 a $50,000|$100,000.01 a $1,000,000|$50,000.01 a $100,000|$10,000.01 a $25,000
+Rentas gravadas de un Mediano Contribuyente|$1,500,000.01 a $10,000,000|$4,000,000.01 a $14,000,000|$10,000,000.01 a $20,000,000|$3,000,000.01 a $12,000,000
+Los contribuyentes categorizados como “Otros” son|Los que no cumplen criterios de Grandes ni Medianos|Los no inscritos en IVA|Los que venden solo a consumidor final|Los que tienen activo menor a $2,285.71
+El Art. 23 literal a) del Código Tributario establece la función de|Registro, control y clasificación de sujetos pasivos|Imposición de multas y sanciones|Cobro de intereses por mora|Fiscalización en aduanas
+Mantienen su categoría actual en la reclasificación|Gasolineras y corredores de bolsa|Importadores y exportadores|Bancos y aseguradoras|Cementeras y ferreterías
+Porcentaje de retención o percepción de IVA|1%|13%|2%|0.5%
+La retención o percepción de IVA se calcula sobre|El precio neto, sin el 13% de IVA|El precio total incluyendo IVA|Solo el IVA facturado|La utilidad bruta de la venta
+Son agentes de retención de IVA|Todos los Grandes Contribuyentes|Solo los importadores|Los Medianos Contribuyentes|Los consumidores finales
+Hay retención cuando un Gran Contribuyente|Compra a un mediano o pequeño inscrito en IVA|Vende a un consumidor final|Compra a otro Gran Contribuyente|Realiza una exportación
+Hay percepción cuando un Gran Contribuyente (de los productos designados)|Vende a un mediano o pequeño inscrito en IVA|Vende a un consumidor final|Vende a otro Gran Contribuyente|Vende a una entidad exenta
+La percepción de IVA está regulada en el|Art. 163 del Código Tributario|Art. 162 del Código Tributario|Art. 64 de la Ley del IVA|Art. 28 de la Ley del IVA
+La retención de IVA está regulada en el|Art. 162 del Código Tributario|Art. 163 del Código Tributario|Art. 22 de la Ley del IVA|Art. 11 de la Ley del IVA
+La tarjeta de contribuyente del Gran Contribuyente es de color|Celeste|Verde|Amarillo|Rosado
+En la retención, el comprobante de retención lo emite|El comprador (agente de retención)|El vendedor|El Ministerio de Hacienda|La imprenta autorizada
+El agente de percepción debe emitir y entregar|Comprobante de Crédito Fiscal|Factura de consumidor final|Nota de remisión|Comprobante de retención
+Son agentes de percepción los Grandes que importan, producen o distribuyen|Bebidas alcohólicas, cigarros y gaseosas|Textiles y calzado|Software y servicios de TI|Granos básicos
+La Dirección General de la Renta de Aduanas percibe IVA en la importación de|Vehículos usados|Medicinas|Maquinaria agrícola|Libros
+Venta de $1,000 + IVA a un mediano por un Gran Contribuyente: la percepción es de|$10.00|$13.00|$11.30|$1.30
+En ese mismo ejemplo de percepción, el comprador paga en total|$1,140.00|$1,130.00|$1,143.00|$1,120.00
+Compra de $1,000 + IVA por un Gran Contribuyente a un mediano: el vendedor recibe en efectivo|$1,120.00|$1,130.00|$1,140.00|$1,000.00
+La cuenta “IVA percibido y retenido por pagar” que lleva el Gran Contribuyente es de|Pasivo|Activo|Patrimonio|Ingresos
+El mediano al que le retienen IVA registra el “IVA retenido” como|Activo (IVA pagado por anticipado)|Pasivo (débito fiscal)|Ingreso por ventas|Gasto operativo
+La alícuota del IVA en operaciones internas es|13%|10%|15%|16%
+La tasa del IVA en exportaciones es|0%|13%|1%|5%
+Un producto de $100 neto con IVA incluido cuesta|$113.00|$100.00|$126.00|$87.00
+Para obtener el precio neto de $113.00 con IVA se divide entre|1.13|0.13|1.00|113
+El IVA es un impuesto|Indirecto, plurifásico y no acumulativo|Directo y acumulativo|Directo sobre la renta|Específico y fijo
+Operación exenta es aquella que|Cumple el hecho generador pero tiene dispensa legal|No cumple el hecho generador|Tributa a tasa del 13%|Se paga mediante retención
+Quien realmente soporta el IVA es|El consumidor final|El contribuyente intermediario|El importador|La Administración Tributaria
+Según el Art. 64, el IVA a pagar es|Débito fiscal menos crédito fiscal|Crédito fiscal menos débito fiscal|Ventas menos compras brutas|Ventas por 13% sin deducciones
+Si el crédito fiscal es mayor que el débito fiscal resulta|IVA a favor|IVA a pagar|Cero absoluto|Multa
+Si el crédito fiscal es menor que el débito fiscal resulta|IVA a pagar|IVA a favor|Operación exenta|Reintegro automático
+La cuenta IVA Crédito Fiscal es una cuenta de|Activo|Pasivo|Patrimonio|Ingreso
+La cuenta IVA Débito Fiscal es una cuenta de|Pasivo|Activo|Patrimonio|Gasto
+El período tributario del IVA es|Mes calendario|Trimestre|Semestre|Año
+La declaración mensual de IVA se presenta en el formulario|F07|F210|F930|F11
+El F-930 corresponde al informe mensual de|Retención, percepción o anticipo a cuenta de IVA|Inscripción al IVA|Declaración de renta|Cierre de establecimiento
+El formulario F210 se usa para|Inscripción al IVA|Declaración mensual|Informe de retenciones|Cambio de domicilio
+Monto mínimo de transferencias del año anterior para ser sujeto pasivo|≥ $5,714.29|≥ $2,285.71|≥ $20,000.00|≥ $11,428.57
+Activo total mínimo para ser sujeto pasivo|≥ $2,285.71|≥ $5,714.29|≥ $571.43|≥ $11,428.57
+Los documentos y pruebas deben conservarse durante|10 años|5 años|3 años|7 años
+El Art. 22 de la Ley del IVA define|Quiénes son contribuyentes|Los momentos de causación|La importación de bienes|El retiro de bienes
+El Art. 28 de la Ley del IVA indica|Quiénes están excluidos de la calidad de contribuyente|Quiénes son agentes de retención|Cómo se calcula el crédito fiscal|Las tasas aplicables
+Mueble corporal es un bien|Tangible transportable de un lugar a otro|Registrable a nombre de una sociedad|Intangible como un derecho de crédito|Inmueble por destinación
+Los títulos valores se consideran|Muebles incorpóreos|Muebles corporales|Bienes inmuebles|Servicios gravados
+Según el Art. 8, el impuesto se causa|Al emitir el documento, o al pagar si no requiere documento|Solo al cierre del mes|Solo cuando se cobra el total|Al presentar la declaración
+Según el Art. 9, la devolución de bienes|No constituye nueva transferencia|Constituye nueva transferencia gravada|Está siempre exenta|Duplica el impuesto
+Según el Art. 11, es hecho generador el retiro de bienes|Para consumo propio de socios o personal|Faltantes por caso fortuito o fuerza mayor|Donados a organizaciones sin fines de lucro|Utilizados para el seguro del negocio
+Según el Art. 16, la prestación de servicios exceptúa|Indemnizaciones y donaciones de servicios|Arrendamientos y asesorías|Honorarios profesionales|Servicios a socios y familiares
+Sobre el DTE (factura electrónica) es correcto que|Es válido sin impresión y Hacienda otorga el Sello de Recepción|Debe imprimirse en imprenta autorizada|Lo emite el receptor|Carece de firma electrónica`.split("\n").map(l=>l.split("|"));
+const E=["Criterio 2 del Gran Contribuyente: ventas IVA ≥ $14,000,000.01 anuales.","Compras IVA ≥ $12,000,000.01; los $14 M son el umbral de ventas.","Pagos en DGT ≥ $1,000,000.01 (en medianos llegan hasta $1,000,000).","Retenciones/percepciones ≥ $50,000.01; de $25,000.01 a $50,000 es mediano.","Ganancia neta igual o mayor a $500,000; es el único criterio sin rango mediano.","Rentas gravadas ≥ $10,000,000.01 para ser Gran Contribuyente.","Costos y gastos operativos en renta ≥ $9,000,000.01.","Basta cumplir por lo menos uno de los siete criterios.","Mediano: ventas desde $4,000,000.01 hasta $14,000,000.","Mediano: compras desde $3,000,000.01 hasta $12,000,000.","Mediano: pagos en DGT de $100,000.01 hasta $1,000,000.","Mediano: retenciones/percepciones de $25,000.01 a $50,000.","Mediano: rentas gravadas de $1,500,000.01 a $10,000,000.","“Otros” son quienes no cumplen los criterios de Grandes ni Medianos.","El Art. 23 lit. a) faculta a Hacienda a registrar, controlar y clasificar contribuyentes por ingresos y actividad.","El comunicado dice que gasolineras (combustibles) y corredores de bolsa conservan su categoría.","La retención y la percepción son del 1%.","Se calcula sobre el precio neto, excluyendo el 13% de IVA.","Todos los Grandes Contribuyentes son agentes de retención (Art. 162 CT).","Retiene cuando compra bienes o servicios a un mediano o pequeño inscrito en IVA.","Percibe cuando vende los bienes designados a un mediano o pequeño inscrito (Art. 163 CT).","Percepción: Art. 163 CT. Retención: Art. 162 CT.","Retención: Art. 162 CT. Percepción: Art. 163 CT.","El folleto indica que la tarjeta del Gran Contribuyente es color celeste.","El agente de retención (comprador) emite el comprobante de retención; el vendedor emite el CCF.","El agente de percepción debe emitir y entregar Comprobante de Crédito Fiscal.","Aplica a bebidas alcohólicas, cigarros, gaseosas, petróleo, ferretería, repuestos, construcción y cemento.","La DGA percibe en la importación de vehículos usados.","1% sobre el neto de $1,000 = $10.00.","$1,000 + $130 de IVA + $10 de percepción = $1,140.","$1,000 + $130 de IVA − $10 de retención = $1,120.","Es un valor que se debe entregar al fisco, por eso es cuenta de pasivo.","Es IVA que le retienen y recupera después, por eso es un activo (pagado por anticipado).","La tasa vigente en operaciones internas es del 13%.","Las exportaciones tienen tasa del 0%.","$100 × 1.13 = $113.00.","Para sacar el neto se divide entre 1.13: $113 ÷ 1.13 = $100.","Grava cada etapa pero deja deducir lo pagado antes: indirecto, plurifásico y no acumulativo.","Exento: cumple el hecho generador, pero la ley le otorga dispensa.","Los contribuyentes lo trasladan; quien realmente lo paga es el consumidor final.","Art. 64: débito fiscal causado menos crédito fiscal del mismo período.","Si las compras (crédito) superan a las ventas (débito), queda IVA a favor.","Si el débito supera al crédito, hay IVA a pagar.","El IVA pagado en compras queda a favor de la empresa: es un activo.","El IVA cobrado en ventas se debe al fisco: es un pasivo.","El período fiscal es el mes calendario.","El F07 es la declaración mensual de IVA.","El F-930 es el informe mensual de retención, percepción o anticipo a cuenta.","El F210 es el formulario de inscripción al IVA.","Es sujeto pasivo quien transfirió el año anterior $5,714.29 o más (y tiene activo ≥ $2,285.71).","El activo total debe ser ≥ $2,285.71.","La presentación indica conservar los documentos 10 años desde su emisión.","El Art. 22 define a los contribuyentes del impuesto.","El Art. 28 señala quiénes están excluidos de la calidad de contribuyentes.","Art. 5: bien tangible transportable por sí mismo o por una fuerza externa.","","Art. 8: al emitir el documento, o al pagar cuando no requiere documento.","Art. 9: devolver bienes no es una nueva transferencia, no genera impuesto.","El retiro para consumo propio, de socios o personal es hecho generador; las otras opciones son excepciones.","Art. 16 exceptúa las indemnizaciones y las donaciones de servicios.","El DTE es válido sin impresión; Hacienda lo valida y otorga el Sello de Recepción."];
+const $=i=>document.getElementById(i),sh=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+let Q=[],cur=0,T=3600,iv=null,done=false;
+function tab(n){$("sum").hidden=n!=1;$("ex").hidden=n!=2;$("t1").className=n==1?"on":"";$("t2").className=n==2?"on":"";scrollTo(0,0)}
+$("t1").onclick=()=>tab(1);$("t2").onclick=()=>tab(2);$("go1").onclick=()=>tab(2);
+function start(){Q=sh(D.map((r,i)=>[r,E[i]]).filter((_,i)=>i!=55)).map(([r,e])=>{const c=r[1],o=sh(r.slice(1));return{q:r[0],o,c:o.indexOf(c),a:-1,e}});cur=0;draw.l=-1;done=false;
+$("st").hidden=true;$("rs").hidden=true;$("qa").hidden=false;draw()}
+function tick(){const m=Math.floor(T/60),s=T%60;$("tm").textContent=String(m).padStart(2,"0")+":"+String(s).padStart(2,"0");$("tm").className="tm"+(T<300?" lo":"")}
+function draw(){const x=Q[cur];$("cn").textContent=(cur+1)+"/"+Q.length;$("sc").textContent="✓ "+Q.filter(q=>q.a==q.c).length;$("bi").style.width=Q.filter(q=>q.a>=0).length/Q.length*100+"%";$("qt").textContent=x.q;if(draw.l!=cur){$("qt").style.animation="none";$("qt").offsetWidth;$("qt").style.animation="";draw.l=cur}
+$("op").innerHTML="";const an=x.a>=0;x.o.forEach((t,i)=>{const b=document.createElement("button");b.className="o"+(an?(i==x.c?" ok":x.a==i?" no":" dim"):"");b.innerHTML="<b>"+(an&&i==x.c?"✓":an&&x.a==i?"✗":"ABCD"[i]+")")+"</b><span></span>";b.lastChild.textContent=t;if(!an)b.onclick=()=>{x.a=i;draw()};$("op").appendChild(b)});$("ex2").hidden=!an;if(an){const g=x.a==x.c;$("ex2").className="fb "+(g?"g":"b");$("ex2").innerHTML="<b></b><span></span>";$("ex2").firstChild.textContent=g?"¡Correcta! ":"Incorrecta. La correcta es "+"ABCD"[x.c]+") ";$("ex2").lastChild.textContent=x.e}
+$("pv").disabled=cur==0;$("nx").disabled=x.a<0;$("nx").textContent=cur==Q.length-1?"Finalizar ✓":"Siguiente →";
+const n=Q.filter(q=>q.a>=0).length;$("pr").textContent="Respondidas: "+n+" / "+Q.length+" · Marcadas: "+Q.filter(q=>q.f).length;
+$("pl").innerHTML="";Q.forEach((q,i)=>{const b=document.createElement("button");b.textContent=i+1;b.className=(q.a>=0?"a ":"")+(q.f?"f ":"")+(i==cur?"c":"");b.onclick=()=>{cur=i;draw()};$("pl").appendChild(b)})}
+$("go2").onclick=start;$("pv").onclick=()=>{cur--;draw()};$("nx").onclick=()=>{if(cur==Q.length-1)finish();else{cur++;draw()}};$("fg").onclick=()=>{Q[cur].f=!Q[cur].f;draw()};
+$("fin").onclick=()=>{const u=Q.filter(q=>q.a<0).length;if(confirm(u?"Tenés "+u+" pregunta(s) sin responder. ¿Finalizar el examen?":"¿Finalizar el examen?"))finish()};
+function finish(){if(done)return;done=true;clearInterval(iv);$("qa").hidden=true;const ok=Q.filter(q=>q.a==q.c).length,bl=Q.filter(q=>q.a<0).length,pc=Math.round(ok/Q.length*100),ap=pc>=60;
+let h='<div class="card"><div class="big" style="color:var(--'+(ap?"ok":"bad")+')">'+ok+' / '+Q.length+'</div><p style="text-align:center;margin:0"><b>'+pc+'%</b> · Nota '+(ok/Q.length*10).toFixed(1)+' · '+(ap?"Aprobado":"Reprobado")+'</p><p class="mut" style="text-align:center">Incorrectas: '+(Q.length-ok-bl)+'</p><div style="text-align:center"><button class="btn p" id="rt">Reintentar</button> <button class="btn" id="wo">Ver solo falladas</button></div></div><div id="rv"></div>';
+$("rs").innerHTML=h;$("rs").hidden=false;let only=false;
+const rv=()=>{$("rv").innerHTML="";Q.forEach((q,i)=>{const g=q.a==q.c;if(only&&g)return;const d=document.createElement("div");d.className="r"+(g?" g":"");
+d.innerHTML="<b></b><div class='mut' style='margin-top:4px'></div>";d.firstChild.textContent=(i+1)+". "+q.q;
+d.lastChild.textContent=(g?"✓ Correcta: ":"✗ Tu respuesta: "+(q.a<0?"sin responder":q.o[q.a])+" → Correcta: ")+q.o[q.c]+" — "+q.e;$("rv").appendChild(d)})};
+rv();$("rt").onclick=start;$("wo").onclick=()=>{only=!only;$("wo").textContent=only?"Ver todas":"Ver solo falladas";rv()};scrollTo(0,0);if(ap)for(let i=0;i<30;i++){const s=document.createElement("span");s.className="cf";s.textContent=["🎉","✨","🎊","⭐"][i%4];s.style.cssText="left:"+Math.random()*100+"vw;animation-delay:"+Math.random()*1.2+"s";document.body.appendChild(s);setTimeout(()=>s.remove(),4500)}}
+</script></body></html>
